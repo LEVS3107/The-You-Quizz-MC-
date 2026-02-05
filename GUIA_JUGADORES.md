@@ -1,72 +1,42 @@
 # 👑 GUÍA DE JUEGO: The You Quizz MC
 
-¡Bienvenidos a la corte! Este es un juego social donde el objetivo no es ser el más fuerte ni el más rápido, sino **quien mejor conoce al REY**.
+¡Bienvenidos a la corte! El objetivo es simple: conocer al Rey mejor que nadie para ascender al Trono.
 
-## 🎮 ¿De qué trata?
-Un jugador es el **Rey** (Juez Supremo). Los demás son **Concursantes** (Cortesanos).
-El Rey hará preguntas sobre su vida, gustos y secretos. Los concursantes deben responder en el chat. Si al Rey le gusta tu respuesta, subes. Si no... sufres.
-
----
-
-## 🚀 Cómo Empezar (Paso a Paso)
-
-### 1. Preparativos (Solo la primera vez)
-Al entrar al mundo, un administrador debe ejecutar estos dos comandos para encender la maquinaria:
-- `/function youquizz:admin/setup` (Enciende la tabla de puntos).
-- `/function youquizz:questions/reset` (Baraja el mazo de preguntas).
-
-### 2. Asignar Roles
-- **El Rey:** El jugador elegido debe ejecutar:
-  `/function youquizz:roles/set_king`
-- **Los Concursantes:** Todos los demás deben unirse ejecutando:
-  `/function youquizz:roles/join`
-
-### 3. El Poder del Rey
-El Rey debe escribir este comando para recibir su herramienta de trabajo:
-- `/function youquizz:items/give_book`
-Obtendrá el **Cetro del Rey** (un libro mágico con botones).
+## 🎮 Mecánica del Juego
+- **El Rey (Juez):** Lanza preguntas sobre su vida y juzga vuestras respuestas.
+- **Los Concursantes:** Responden en el chat. Si aciertan, **su personaje se moverá físicamente** hacia la siguiente casilla del tablero.
 
 ---
 
-## 🕹️ Cómo se Juega una Ronda
+## 🕹️ Controles y Efectos
 
-1. **Lanzar Pregunta:** El Rey abre su libro y hace clic en **[ 🎲 NUEVA PREGUNTA ]**.
-   - *Nota:* Saldrá una pregunta al azar en el chat. ¡No se repiten durante la partida!
+### 1. El Juicio Real
+El Rey te mirará y decidirá tu destino usando su Cetro:
 
-2. **Responder:** Los concursantes escriben su respuesta rápidamente en el chat de Minecraft (T).
+- **👍 LIKE (+1 Casilla):**
+  - El Rey aprueba tu respuesta.
+  - **Efecto:** Tu personaje es teletransportado 1 bloque adelante.
+  - *Bonus:* Te cura cualquier maldición.
 
-3. **El Juicio:** El Rey lee las respuestas y decide. Para calificar a alguien, **el Rey debe acercarse al jugador (mirarlo de cerca)** y pulsar un botón en su libro:
+- **❤️ ME ENCANTA (+2 Casillas):**
+  - Respuesta legendaria.
+  - **Efecto:** Teletransporte doble + Velocidad y Brillo (VIP).
 
-   - **👍 LIKE (+1 Punto):**
-     - Respuesta correcta o graciosa.
-     - **Efecto:** Te cura cualquier maldición.
+- **❌ FALLO (-1 Casilla):**
+  - Respuesta incorrecta o aburrida.
+  - **Efecto:** Retrocedes 1 casilla físicamente.
+  - **Castigo:** Recibes Ceguera y Lentitud.
+  - **⚠️ MUERTE:** Si tu puntaje es negativo, ¡un **Creeper** aparecerá para explotarte!
 
-   - **❤️ ME ENCANTA (+2 Puntos):**
-     - Respuesta legendaria o aduladora.
-     - **Efecto:** Te vuelve brillante y rápido (Buffs VIP).
-
-   - **❌ FALLO (-1 Punto):**
-     - Respuesta incorrecta o aburrida.
-     - **Efecto:** Te deja **CIEGO y LENTO** (Maldición).
-     - **⚠️ PELIGRO:** Si tu puntaje baja de 0, ¡un **Creeper** aparecerá para explotarte!
-
----
-
-## 🏆 ¿Cómo Ganar?
-La carrera es a **10 Puntos**.
-En el momento en que un Concursante llega a la casilla 10:
-1. Se anuncia su victoria a todo el servidor.
-2. El Rey anterior es destronado (pierde su corona).
-3. **El Ganador se convierte en el NUEVO REY.**
-4. Se reinician los puntos y el mazo de preguntas.
-
-¡Y el ciclo comienza de nuevo!
+### 2. Victoria
+La carrera es hasta la **Casilla 10 (El Trono)**.
+- El primero en llegar a la meta destrona automáticamente al Rey actual.
+- El Ganador se convierte en el **NUEVO REY**.
+- Se reinician las posiciones y el mazo de preguntas para una nueva ronda.
 
 ---
 
-## 🆘 Comandos de Emergencia
-Si algo se rompe o el libro se pierde:
-
-- **Resetear todo manual:** `/function youquizz:admin/setup`
-- **Recargar preguntas:** `/function youquizz:questions/reset`
-- **Dar libro de nuevo:** `/function youquizz:items/give_book`
+## ⚡ Consejos
+- Las preguntas **NO se repiten** durante la ronda.
+- Si te quedas "bugueado" o no te mueves, avisa al Admin para que revise los marcadores del mapa.
+- ¡Cuidado con el Creeper! Si fallas mucho, aléjate de los demás para no matarlos con tu explosión.
