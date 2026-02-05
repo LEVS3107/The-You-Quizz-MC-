@@ -1,43 +1,10 @@
-# 1. Limpieza de seguridad (borrar anteriores si quedaron)
-kill @e[type=area_effect_cloud,tag=Q_RNG]
+# 1. Verificar si quedan preguntas
+execute unless entity @e[type=area_effect_cloud,tag=Q_Pool] run tellraw @a {"text":"[!] Se han acabado las preguntas de esta ronda.","color":"red"}
 
-# 2. INVOCAR EL POOL DE PREGUNTAS (30 Opciones)
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q1"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q2"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q3"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q4"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q5"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q6"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q7"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q8"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q9"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q10"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q11"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q12"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q13"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q14"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q15"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q16"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q17"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q18"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q19"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q20"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q21"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q22"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q23"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q24"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q25"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q26"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q27"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q28"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q29"],Duration:5}
-summon area_effect_cloud ~ ~ ~ {Tags:["Q_RNG","Q30"],Duration:5}
+# 2. Seleccionar una al azar del mazo existente
+tag @e[type=area_effect_cloud,tag=Q_Pool,sort=random,limit=1] add Selected
 
-# 3. SELECCIÓN ALEATORIA (El paso clave que faltaba)
-# De todas las nubes invocadas, elegimos UNA sola al azar y le ponemos el tag "Selected"
-tag @e[type=area_effect_cloud,tag=Q_RNG,sort=random,limit=1] add Selected
-
-# 4. EJECUCIÓN (Solo se ejecuta la que fue seleccionada)
+# 3. EJECUCIÓN (Solo se ejecuta la que fue seleccionada)
 # --- PERSONALES ---
 execute as @e[tag=Selected,tag=Q1] run tellraw @a [{"text":"\n[PREGUNTA] ","color":"gold","bold":true},{"text":"¿Cuál es el mayor miedo irracional del Rey?","color":"yellow"}]
 execute as @e[tag=Selected,tag=Q2] run tellraw @a [{"text":"\n[PREGUNTA] ","color":"gold","bold":true},{"text":"¿Qué comida podría comer el Rey todos los días sin cansarse?","color":"yellow"}]
@@ -76,6 +43,8 @@ execute as @e[tag=Selected,tag=Q28] run tellraw @a [{"text":"\n[PREGUNTA] ","col
 execute as @e[tag=Selected,tag=Q29] run tellraw @a [{"text":"\n[PREGUNTA] ","color":"gold","bold":true},{"text":"¿Cuál es la serie que el Rey ha visto más veces?","color":"yellow"}]
 execute as @e[tag=Selected,tag=Q30] run tellraw @a [{"text":"\n[PREGUNTA] ","color":"gold","bold":true},{"text":"¿Cuál es el trabajo de los sueños del Rey?","color":"yellow"}]
 
-# 5. Sonido y Limpieza final
+# 4. Sonido
 playsound block.note_block.bell master @a ~ ~ ~ 2 1.2
-kill @e[type=area_effect_cloud,tag=Q_RNG]
+
+# 5. ELIMINAR LA PREGUNTA USADA (Para que no se repita)
+kill @e[tag=Selected]
