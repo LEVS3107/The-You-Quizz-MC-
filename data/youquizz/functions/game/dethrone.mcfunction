@@ -15,6 +15,9 @@ effect clear @a
 # Resetear tablero
 scoreboard players set @a casilla 0
 
+# TELETRANSPORTAR A TODOS AL INICIO (Pos 0)
+execute as @a run function youquizz:map/teleport
+
 # RECARGAR PREGUNTAS (Para el nuevo Rey)
 function youquizz:questions/reset
 
