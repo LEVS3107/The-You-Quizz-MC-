@@ -3,5 +3,8 @@ scoreboard players add @s casilla 1
 tellraw @a ["",{"selector":"@s","color":"aqua"},{"text":" recibe un ","color":"gray"},{"text":"LIKE","color":"green","bold":true},{"text":" (+1)","color":"green"}]
 playsound entity.experience_orb.pickup master @a ~ ~ ~ 1 1
 
+# FIX: Quitar maldiciones previas
+function youquizz:events/state_neutral
+
 # Verificar si ganó
 function youquizz:game/check_win

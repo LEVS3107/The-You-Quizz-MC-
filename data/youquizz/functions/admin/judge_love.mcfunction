@@ -6,5 +6,8 @@ tellraw @a ["",{"selector":"@s","color":"aqua"},{"text":" recibe un ","color":"g
 execute at @s run particle heart ~ ~2 ~ 0.5 0.5 0.5 1 10
 playsound entity.player.levelup master @a ~ ~ ~ 1 1
 
+# FIX: Aplicar Buffs
+function youquizz:events/state_blessed
+
 # Verificar si ganó
 function youquizz:game/check_win
