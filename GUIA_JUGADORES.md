@@ -2,41 +2,41 @@
 
 ¡Bienvenidos a la corte! El objetivo es simple: conocer al Rey mejor que nadie para ascender al Trono.
 
-## 🎮 Mecánica del Juego
-- **El Rey (Juez):** Lanza preguntas sobre su vida y juzga vuestras respuestas.
-- **Los Concursantes:** Responden en el chat. Si aciertan, **su personaje se moverá físicamente** hacia la siguiente casilla del tablero.
+## 🎯 Objetivo
+Ser el primero en llegar a la **Casilla 10 (El Trono)**.
+Quien lo logre, destrona al Rey actual y comienza una nueva ronda como el nuevo monarca.
+
+## 🕹️ Cómo se Juega
+
+1. **La Pregunta:** El Rey lanzará una pregunta sobre su vida, gustos o dilemas en el chat.
+2. **La Respuesta:** Escribid vuestra respuesta rápidamente en el chat (T).
+3. **El Juicio:** El Rey leerá las respuestas. Si le gusta la tuya, **te mirará y usará su Cetro**.
 
 ---
 
-## 🕹️ Controles y Efectos
+## ⚖️ El Juicio Real (Puntos y Efectos)
 
-### 1. El Juicio Real
-El Rey te mirará y decidirá tu destino usando su Cetro:
+El Rey tiene 3 botones para decidir vuestro destino. Cada uno tiene un efecto físico en el tablero:
 
-- **👍 LIKE (+1 Casilla):**
-  - El Rey aprueba tu respuesta.
-  - **Efecto:** Tu personaje es teletransportado 1 bloque adelante.
-  - *Bonus:* Te cura cualquier maldición.
+### 👍 LIKE (+1 Casilla)
+- **Criterio:** Respuesta correcta o graciosa.
+- **Efecto:** Tu personaje se teletransporta 1 bloque adelante.
+- **Bonus:** Te cura cualquier maldición (ceguera/lentitud).
 
-- **❤️ ME ENCANTA (+2 Casillas):**
-  - Respuesta legendaria.
-  - **Efecto:** Teletransporte doble + Velocidad y Brillo (VIP).
+### ❤️ ME ENCANTA (+2 Casillas)
+- **Criterio:** Respuesta legendaria, aduladora o increíblemente precisa.
+- **Efecto:** ¡Avance doble! Además recibes **Velocidad y Brillo** para presumir.
 
-- **❌ FALLO (-1 Casilla):**
-  - Respuesta incorrecta o aburrida.
-  - **Efecto:** Retrocedes 1 casilla físicamente.
-  - **Castigo:** Recibes Ceguera y Lentitud.
-  - **⚠️ MUERTE:** Si tu puntaje es negativo, ¡un **Creeper** aparecerá para explotarte!
-
-### 2. Victoria
-La carrera es hasta la **Casilla 10 (El Trono)**.
-- El primero en llegar a la meta destrona automáticamente al Rey actual.
-- El Ganador se convierte en el **NUEVO REY**.
-- Se reinician las posiciones y el mazo de preguntas para una nueva ronda.
+### ❌ FALLO (-1 Casilla)
+- **Criterio:** Respuesta incorrecta, aburrida o que ofende al Rey.
+- **Efecto:** Retrocedes 1 casilla físicamente.
+- **Maldición:** Recibes **Ceguera y Lentitud** infinita (hasta que aciertes una).
+- **💀 SENTENCIA DE MUERTE:** Si tu puntaje baja de 0 (negativo), el Rey invocará un **Creeper** a tu lado para ejecutarte.
 
 ---
 
-## ⚡ Consejos
-- Las preguntas **NO se repiten** durante la ronda.
-- Si te quedas "bugueado" o no te mueves, avisa al Admin para que revise los marcadores del mapa.
-- ¡Cuidado con el Creeper! Si fallas mucho, aléjate de los demás para no matarlos con tu explosión.
+## 🔄 El Ciclo del Rey
+Cuando alguien gana:
+1. Se anuncia al nuevo Rey con fuegos artificiales.
+2. Todos los demás vuelven a la casilla 0.
+3. El nuevo Rey recibe el libro de preguntas y... ¡empieza la venganza!
